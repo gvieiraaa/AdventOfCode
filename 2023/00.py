@@ -1,8 +1,7 @@
 ﻿from aocd import data, submit
-import math, re, itertools, functools, collections, string
+import math, re, itertools, functools, collections, string, dataclasses
 
 lines = data.splitlines()
-
 
 def part1() -> int:
     return -1
