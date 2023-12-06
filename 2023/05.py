@@ -1,6 +1,6 @@
 ﻿from aocd import data, submit
 import math, re, itertools, functools, collections, string, dataclasses
-
+collections.ChainMap
 lines = data.splitlines()
 
 def is_valid(seeds: tuple, n: int) -> bool:
@@ -45,6 +45,7 @@ def part2() -> int:
                     break
         if is_valid(seeds_tup, i):
             return start_i
+        
 
 
 if __name__ == "__main__":
