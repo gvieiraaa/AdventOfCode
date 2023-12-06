@@ -13,9 +13,15 @@ def part1() -> int:
 
 def part2() -> int:
     time, distance = data.splitlines()
-    time = int(time.replace(" ", "").partition(":")[2])
-    distance = int(distance.replace(" ", "").partition(":")[2])
-    return sum(1 for i in range(1, time) if (time - i) * i > distance)
+    time = int(time.replace(" ", "").split(":")[1])
+    distance = int(distance.replace(" ", "").split(":")[1])
+    # for i in range(time):
+    #     if (time - i) * i > distance:
+    #         return(time - i*2 + time%2)
+    d = time**2 - 4*distance
+    r1 = (time + d**0.5) / 2
+    r2 = (time - d**0.5) / 2
+    return (time - 2 * math.ceil(min(x for x in (r1, r2) if x > 0)) + time%2)
 
 
 if __name__ == "__main__":
