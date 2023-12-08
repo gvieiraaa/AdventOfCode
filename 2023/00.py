@@ -4,10 +4,10 @@ import math, re, itertools, functools, collections, string, dataclasses
 lines = data.splitlines()
 
 def part1() -> int:
-    return -1
+    return None
 
 def part2() -> int:
-    return -1
+    return None
 
 
 if __name__ == "__main__":
